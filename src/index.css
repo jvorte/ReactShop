@@ -1,0 +1,15 @@
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'react-toastify/dist/ReactToastify.css';
+
+
+*{
+    font-family: "Roboto", serif;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+ 
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
