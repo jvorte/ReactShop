@@ -7,35 +7,37 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-4">Your Cart</h1>
+    <div className="container mx-auto px-6 py-8 max-w-4xl">
+      <h1 className="text-3xl font-semibold mb-8 text-center">Your Cart</h1>
       
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <div className="text-center text-xl text-gray-500">
+          Your cart is empty.
+        </div>
       ) : (
         <div>
           {cart.map(product => (
-            <div key={product.id} className="flex justify-between items-center border-b py-4">
-              <div className="flex items-center">
+            <div key={product.id} className="flex justify-between items-center border-b py-6 mb-6 bg-white shadow-lg rounded-lg">
+              <div className="flex items-center ps-4">
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="w-16 h-16 object-cover rounded-md mr-4"
+                  className="w-20 h-20 object-cover rounded-md mr-6 shadow-md"
                 />
                 <div>
-                  <h3 className="font-semibold">{product.name}</h3>
-                  <p className="text-lg">${product.price}</p>
-                  <div className="flex items-center mt-2">
+                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                  <p className="text-lg text-gray-600">${product.price}</p>
+                  <div className="flex items-center mt-4">
                     <button 
                       onClick={() => decreaseQuantity(product.id)} 
-                      className="bg-gray-300 text-gray-700 py-1 px-2 rounded-md hover:bg-gray-400"
+                      className="bg-gray-300 text-gray-700 py-1 px-2 rounded-md hover:bg-gray-400 transition-colors"
                     >
                       -
                     </button>
-                    <span className="mx-2">{product.quantity}</span>
+                    <span className="mx-4 text-xl font-semibold">{product.quantity}</span>
                     <button 
                       onClick={() => increaseQuantity(product.id)} 
-                      className="bg-gray-300 text-gray-700 py-1 px-2 rounded-md hover:bg-gray-400"
+                      className="bg-gray-300 text-gray-700 py-1 px-2  rounded-md hover:bg-gray-400 transition-colors"
                     >
                       +
                     </button>
@@ -44,22 +46,24 @@ const Cart = () => {
               </div>
               <button 
                 onClick={() => removeFromCart(product.id)} 
-                className="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600"
+                className="bg-red-500 text-white py-1 px-4 me-4 rounded-md hover:bg-red-600 transition-colors"
               >
                 Remove
               </button>
             </div>
           ))}
           
-          <div className="mt-6 text-xl font-semibold">
-            Total: ${getTotalAmount()}
+          <div className="mt-6 text-2xl font-semibold text-right">
+            Total: <span className="text-blue-500">${getTotalAmount()}</span>
           </div>
-          <button 
-            onClick={() => navigate('/checkout')}
-            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-200"
-          >
-            Checkout
-          </button>
+          <div className="flex justify-end mt-8">
+            <button 
+              onClick={() => navigate('/checkout')}
+              className="bg-blue-500 text-white py-2 px-8 rounded-md hover:bg-blue-600 transition-colors duration-200"
+            >
+              Checkout
+            </button>
+          </div>
         </div>
       )}
     </div>
