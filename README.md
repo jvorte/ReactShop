@@ -43,31 +43,8 @@ npm start
 
 
 ecommerce-project/
+![image](https://github.com/user-attachments/assets/ca9dcc12-8729-4b06-a1ac-06399465daf3)
 
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Filters.jsx
-│   │   ├── Header.jsx
-│   │   ├── ProductItem.jsx
-│   │   └── ProductList.jsx
-│   ├── context/
-│   │   ├── CartContext.jsx
-│   │   └── AuthContext.jsx
-│   ├── pages/
-│   │   ├── Cart.jsx
-│   │   ├── Checkout.jsx
-│   │   ├── Home.jsx
-│   │   ├── Order.jsx
-│   │   └── ProductDetails.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── package.json
-└── README.md
 
 API
 This project uses the DummyJSON API to fetch product data. You can find more information about the API here.
