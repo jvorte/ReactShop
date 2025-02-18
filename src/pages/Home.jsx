@@ -57,43 +57,46 @@ const Home = () => {
   };
 
   return (
-    <div className=" mx-auto">
+    <div className="container mx-auto">
       {/* Header section with Search and Filters */}
-      <div className="w-full ps-2 mb-2  bg-[#232F3E] ">
-   
-        <div className="flex items-center justify-between gap-2">
+      <div className="w-full bg-[#232F3E] p-4 mb-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Search */}
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search products..."
-            className="w-1/2 p-1 pt-0 border bg-white border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6 text-white"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          <div className="flex items-center w-full md:w-1/2">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search products..."
+              className="flex-grow p-2 border bg-white border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 text-white ml-2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </div>
 
           {/* Filters */}
-          <div className="p-1 w-1/2 pt-6">
+          <div className="w-full md:w-1/2">
             <Filters onFilterChange={handleFilterChange} />
           </div>
         </div>
       </div>
 
       {/* Product List */}
-      <ProductList products={filteredProducts} />
+      <div className="flex justify-center">
+        <ProductList products={filteredProducts} />
+      </div>
     </div>
   );
 };
