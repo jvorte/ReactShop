@@ -43,23 +43,29 @@ const Filters = ({ onFilterChange }) => {
 
         <div>
           <div className="flex space-x-2">
-            <input
-              type="number"
-              name="min"
-              value={priceRange[0]}
-              onChange={handlePriceChange}
-              className="w-full p-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Min"
-            />
+            <div className="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500">
+              <span className="px-2 text-white">€</span>
+              <input
+                type="number"
+                name="min"
+                value={priceRange[0] || ''}
+                onChange={handlePriceChange}
+                className="w-full p-1 border-none focus:ring-0"
+                placeholder="Min"
+              />
+            </div>
             <span className="text-xl font-semibold text-gray-700">-</span>
-            <input
-              type="number"
-              name="max"
-              value={priceRange[1]}
-              onChange={handlePriceChange}
-              className="w-full p-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-              placeholder="Max"
-            />
+            <div className="flex items-center border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500">
+              <span className="px-2 text-white">€</span>
+              <input
+                type="number"
+                name="max"
+                value={priceRange[1] || ''}
+                onChange={handlePriceChange}
+                className="w-full p-1 border-none focus:ring-0"
+                placeholder="Max"
+              />
+            </div>
           </div>
         </div>
 
