@@ -25,7 +25,7 @@ const Header = () => {
             <li><a href="/" className="hover:text-gray-400">Hobbys</a></li>
             <li><a href="/" className="hover:text-gray-400">Home</a></li>
             <li><a href="/" className="hover:text-gray-400">Kitchen</a></li>
-            <li><a href="/" className="hover:text-gray-400">Pc</a></li>
+            <li><a href="/" className="hover:text-gray-400">Pc's</a></li>
             <li><a href="/" className="hover:text-gray-400">Summer</a></li>
             <li><a href="/" className="hover:text-gray-400">Fishing</a></li>
             <li><a href="/" className="hover:text-gray-400">Tools</a></li>
