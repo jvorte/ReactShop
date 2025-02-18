@@ -1,15 +1,35 @@
-
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'react-toastify/dist/ReactToastify.css';
 
 
-*{
-    font-family: "Roboto", serif;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
- 
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+* {
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: #E3E6E6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.logo {
+  max-width: 40px;
+  z-index: 3;
+}
+
+.main-content {
+  flex-grow: 1;
 }
