@@ -31,7 +31,7 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <div className="w-full max-w-xs  rounded-lg ">
+    <div className="w-full max-w-xs rounded-lg">
       <Card className="w-full">
         <CardHeader shadow={false} floated={false} className="h-48">
           <img
@@ -49,7 +49,7 @@ const ProductItem = ({ product }) => {
               {product.title}
             </Typography>
             <Typography color="blue-gray" className="font-large">
-              ${product.price}
+              €{product.price}
             </Typography>
           </div>
           <Typography
