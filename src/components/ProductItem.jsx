@@ -64,13 +64,13 @@ const ProductItem = ({ product }) => {
         <CardFooter className="pt-0 flex justify-between gap-2">
           <Link
             to={`/product/${product.id}`}
-            className="flex-1 text-center text-black py-2 px-2 rounded-lg bg-gray-200 hover:bg-green-600 transition duration-200"
+            className="flex-1 text-center text-black py-2 px-2 rounded-lg bg-gray-200 hover:bg-gray-400 transition duration-200"
           >
             View Product
           </Link>
           <Button
             onClick={handleAddToCart}
-            className="flex-1 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
+            className="flex-1 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-200"
           >
             Add to Cart
           </Button>
